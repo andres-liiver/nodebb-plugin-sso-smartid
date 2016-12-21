@@ -1,17 +1,21 @@
-# NodeBB OAuth SSO
+# NodeBB SmartID SSO
 
-NodeBB Plugin that allows users to login/register via any configured OAuth provider. **Please note** that this is not a complete plugin, but merely a skeleton with which you can create your own OAuth SSO plugin for NodeBB (and hopefully share it with others!)
+NodeBB Plugin that allows users to login/register via SmartID (https://smartid.ee)
 
-## How to Adapt
+## Installation
 
-1. Fork this plugin
-    * ![](http://i.imgur.com/APWHJsa.png)
-1. Add the OAuth credentials (around line 30 of `library.js`)
-1. Update profile information (around line 137 of `library.js`) with information from the user API call
-1. Activate this plugin from the plugins page
-1. Restart your NodeBB
-1. Let NodeBB take care of the rest
+Install plugin and its dependencies with NPM:
+```bash
+npm install github:andres-liiver/nodebb-plugin-sso-smartid
+cd node_modules/nodebb-plugin-sso-smartid
+npm install
+```
 
-## Trouble?
+## Usage
 
-Find us on [the community forums](http://community.nodebb.org)!
+1. Register your NodeBB forum with SmartID (https://id.smartid.ee/admin/clientlist)
+  * The redirect URL should be: http(s)://myforum.com/auth/smartid/callback
+    * (In other words, add `/auth/smartid/callback` to the URL of your forum)
+2. Add your client ID and secret in the code (line 46 and 47 in `library.js`)
+2. Activate this plugin from the plugins page
+2. Restart your NodeBB

@@ -29,6 +29,7 @@
   "readme": "",
   "readmeFilename": "README.md",
   "dependencies": {
+    "change-case": "^3.0.0",
     "passport-oauth": "~1.0.0"
   },
   "nbbpm": {
