@@ -1,11 +1,11 @@
 {
-  "name": "nodebb-plugin-sso-oauth",
-  "version": "0.3.1",
-  "description": "NodeBB Generic OAuth SSO",
+  "name": "nodebb-plugin-sso-smartid",
+  "version": "1.0.0",
+  "description": "NodeBB SmartID SSO",
   "main": "library.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/julianlam/nodebb-plugin-sso-oauth"
+    "url": "https://github.com/andres-liiver/nodebb-plugin-sso-smartid"
   },
   "keywords": [
     "nodebb",
@@ -14,16 +14,17 @@
     "oauth2",
     "sso",
     "single sign on",
+    "smartid",
     "login",
     "registration"
   ],
   "author": {
-    "name": "Julian Lam",
-    "email": "julian@nodebb.org"
+    "name": "Andres Liiver",
+    "email": "andres.liiver@gmail.com"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/julianlam/nodebb-plugin-sso-oauth/issues"
+    "url": "https://github.com/andres-liiver/nodebb-plugin-sso-smartid/issues"
   },
   "readme": "",
   "readmeFilename": "README.md",
@@ -31,7 +32,7 @@
     "passport-oauth": "~1.0.0"
   },
   "nbbpm": {
-    "compatibility": "^1.0.1",
+    "compatibility": "^0.8.0",
     "index": false
   }
 }
