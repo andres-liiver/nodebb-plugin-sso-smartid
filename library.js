@@ -52,11 +52,11 @@
 		OAuth = {}, passportOAuth, opts;
 
 	if (!constants.name) {
-		winston.error('[sso-oauth] Please specify a name for your OAuth provider (library.js:32)');
+		winston.error('[sso-smartid] Please specify a name for your OAuth provider (library.js:32)');
 	} else if (!constants.type || (constants.type !== 'oauth' && constants.type !== 'oauth2')) {
-		winston.error('[sso-oauth] Please specify an OAuth strategy to utilise (library.js:31)');
+		winston.error('[sso-smartid] Please specify an OAuth strategy to utilise (library.js:31)');
 	} else if (!constants.userRoute) {
-		winston.error('[sso-oauth] User Route required (library.js:31)');
+		winston.error('[sso-smartid] User Route required (library.js:31)');
 	} else {
 		configOk = true;
 	}
@@ -151,7 +151,7 @@
 		// Find out what is available by uncommenting this line:
 		// console.log(data);
 
-		if (data.status != 'OK') return callback(new Error('OAuth Server returned not OK status'));
+		if (data.status != 'OK') return callback(new Error('SmartID OAuth Server returned not OK status'));
 		var profile = {};
 		var firstName = data.firstname;
 		var lastName = data.lastname;
@@ -241,7 +241,7 @@
 			}
 		], function(err) {
 			if (err) {
-				winston.error('[sso-oauth] Could not remove OAuthId data for uid ' + uid + '. Error: ' + err);
+				winston.error('[sso-smartid] Could not remove OAuthId data for uid ' + uid + '. Error: ' + err);
 				return callback(err);
 			}
 			callback(null, uid);
