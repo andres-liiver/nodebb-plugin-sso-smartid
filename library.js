@@ -28,7 +28,7 @@
 		async = module.parent.require('async'),
 		changeCase = require('change-case');
 
-	var authenticationController = module.parent.require('./controllers/authentication');
+	//var authenticationController = module.parent.require('./controllers/authentication');
 
 	var constants = Object.freeze({
 			type: 'oauth2',	// Either 'oauth' or 'oauth2'
@@ -124,7 +124,7 @@
 						return done(err);
 					}
 
-					authenticationController.onSuccessfulLogin(req, user.uid);
+					//authenticationController.onSuccessfulLogin(req, user.uid);
 					done(null, user);
 				});
 			}));
